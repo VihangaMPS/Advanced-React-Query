@@ -10,7 +10,7 @@ async function fetchComments(postId) {
 export function PostDetail({post}) {
     const {data, isLoading, isError, error} = useQuery({
         queryKey: ["comments", post.id],
-        queryFn: fetchComments(post.id)
+        queryFn: () => fetchComments(post.id)
     });
     if (isLoading) return <h3>Loading ...</h3>;
     if (isError) return (
