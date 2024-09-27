@@ -5,7 +5,7 @@ import {useQuery} from "@tanstack/react-query";
 const maxPostPage = 10;
 
 async function fetchPosts() {
-    const response = await fetch("https://jsonplaceholder.typicod.com/posts?_limit=10&_page=0");
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10&_page=0");
 
     return response.json();
 }
