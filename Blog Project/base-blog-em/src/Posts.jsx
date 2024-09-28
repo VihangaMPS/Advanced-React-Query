@@ -17,7 +17,7 @@ export function Posts() {
 
     const queryClient = useQueryClient();
 
-    useEffect(() => {
+    useEffect(() => {  // - Pre fetching next data
 
         if (currentPage < maxPostPage) {
             const nextPage = currentPage + 1;
