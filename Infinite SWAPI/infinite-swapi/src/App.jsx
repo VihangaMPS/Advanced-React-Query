@@ -1,5 +1,5 @@
-import {Posts} from "./Posts";
 import "./App.css";
+import {InfinitePeople} from "./people/InfinitePeople";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 
@@ -7,14 +7,14 @@ const queryClient = new QueryClient();
 
 function App() {
     return (
-        // provide React Query client to App
         <QueryClientProvider client={queryClient}>
             <div className="App">
-                <h1>Blog &apos;em Ipsum</h1>
-                <Posts/>
-            </div>
+                <h1>Infinite SWAPI</h1>
+                <InfinitePeople/>
+                {/* <InfiniteSpecies /> */}
 
-            <ReactQueryDevtools/>
+                <ReactQueryDevtools/>
+            </div>
         </QueryClientProvider>
     );
 }
